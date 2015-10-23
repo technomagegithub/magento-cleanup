@@ -33,6 +33,17 @@ class MagentoDbCleaner
         // Only Shell access
         (PHP_SAPI !== 'cli' || isset($_SERVER['HTTP_USER_AGENT'])) && die('This script is designed to run in CLI mode.');
         
+        echo "Are you sure you want to perform cleanup for all Magento databases? Type 'yes' to continue: ";
+        $handle = fopen ("php://stdin","r");
+        $line = fgets($handle);
+        $response = trim($line);
+
+        if(!($response == 'yes' || $response == 'y')) {
+            echo "Aborting." . "\n";
+            return;
+        }
+
+        echo "Performing Magento databases cleanup..." . "\n";
         echo "DB Cleaner" . "\n";
         echo "@verion 1.0" . "\n";
 

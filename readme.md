@@ -3,6 +3,12 @@ Magento Cleanup
 
 Simple script which iterates all databases on the given server and performs cleanup of all Magento temporary and log data.
 
+Usage:
+
+```sh
+php magentoCleanup.php
+```
+
 Please edit server parameters at the begining of file
 
 ```sh
