@@ -1,7 +1,17 @@
 Magento Cleanup
 ==============
 
-Simple script which iterates all databases on server and cleans up all log and temporary data from Magento databases.
+Simple script which iterates all databases on the given server and performs cleanup of all Magento temporary and log data.
+
+Please edit server parameters at the begining of file
+
+```sh
+...
+    const DB_HOST = '127.0.0.1';
+    const DB_USERNAME = 'username';
+    const DB_PASSWORD = 'passwors';
+...
+```
 
 Tables being truncated:
 ```sh
